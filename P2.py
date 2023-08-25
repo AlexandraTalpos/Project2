@@ -9,14 +9,13 @@ def main():
     
     url = f'http://www.omdbapi.com/?i=tt3896198&apikey=65ae31c5'
 
-    # Efectuați cererea HTTP GET către API
     response = requests.get(url)
 
-    # Verificați dacă răspunsul este de succes (codul de stare HTTP 200)
+    # Verificam dacă răspunsul este de succes 
     if response.status_code == 200:
         movie_data = response.json()
 
-        # Afișați informațiile despre film
+        # Afișam informațiile despre film
         print("Informații despre film:")
         print(f"Titlu: {movie_data['Title']}")
         print(f"An: {movie_data['Year']}")
